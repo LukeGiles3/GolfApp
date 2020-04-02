@@ -1,0 +1,24 @@
+#scorecard {
+    display:flex;
+}
+.holeinput{
+    width: 30px;
+    display: block;
+    height: 16px;
+    background-color: yellow;
+}
+.holeheader {
+    text-align: center;
+    background-color: red;
+}
+.fullcard{
+    display:flex;
+    background-color: blue;
+}
+.playerlist{
+    margin: 20px;
+    background-color: green;
+}
+.playername{
+    padding: 2px;
+}
