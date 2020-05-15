@@ -1,10 +1,13 @@
 #scorecard {
     display:flex;
 }
+h1 {
+    text-align: center;
+}
 .holeinput{
-    width: 30px;
+    width: 40px;
     display: block;
-    height: 16px;
+    height: 30px;
     background-color: yellow;
 }
 .holeheader {
@@ -20,5 +23,9 @@
     background-color: green;
 }
 .playername{
-    padding: 2px;
+    padding: 5px;
+}
+.par {
+    text-align: center;
+    background-color: aqua;
 }

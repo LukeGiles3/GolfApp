@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-    <link href="css/style.css" rel="stylesheet" />
-</head>
-<body onload="buildCard()">
-    <!-- <h3>Here is the basic JS, HTML, & CSS we built together to create a dynamic list of golf holes based on the number of players.</h3> -->
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-l7xaoY0cJM4h9xh1RfazbgJVUZvdtyLWPueWNtLAphf/UbBgOVzqbOTogxPwYLHM" crossorigin="anonymous">
 
+</head>
+<!-- instead of loading the card, load a submission form with the golf courses and handicaps
+and all that. axios.get all that data then build the card -->
+<body onload="buildCard('18300')">
+    <!-- Here is the basic JS, HTML, & CSS we built together to create a dynamic list of golf holes based on the number of players. -->
+    <h1>gold scorecard</h1>
     <div class="fullcard">
         <div class="playerlist"></div>
         <div id="scorecard"></div>
     </div>
 
-
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

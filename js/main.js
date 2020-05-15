@@ -1,9 +1,21 @@
-var numplayers = 3;
+var numplayers = 4;
 
-function buildCard() {
+
+function buildCard(courseID) {
+    fetch(`https://golf-courses-api.herokuapp.com/courses/${courseID}`).then((response) => {
+        response.json().then((data) => {
+            console.log(data.data)
+            const course = data.data;
+            const holes = course.holes;
+        })
+    })
     // put list of players names (ie 'player 1') inside of the left hand player list
     for(var pl = 1; pl <= numplayers; pl++){
         $(".playerlist").append("<div class='playername'>player "+ pl +"</div>");
+    }
+    for(var i = 1; i <= 18; i++){
+        var par = "<div id='column"+ i +"'><div class='par'>"+ i +"</div></div>";
+        $("#column").append(par);
     }
     // create 18 column to hold the holes for players
     for(var c = 1; c <= 18; c++){
@@ -17,4 +29,9 @@ function buildCard() {
         }
     }
 }
+
+// classes: inside the constructor is what they have, methods are what they do
+// you can have a method that will calculate the yardage or the par or the final score
+// method for adding score to card
+
 
