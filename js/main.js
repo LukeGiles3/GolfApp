@@ -13,10 +13,6 @@ function buildCard(courseID) {
     for(var pl = 1; pl <= numplayers; pl++){
         $(".playerlist").append("<div class='playername'>player "+ pl +"</div>");
     }
-    for(var i = 1; i <= 18; i++){
-        var par = "<div id='column"+ i +"'><div class='par'>"+ i +"</div></div>";
-        $("#column").append(par);
-    }
     // create 18 column to hold the holes for players
     for(var c = 1; c <= 18; c++){
         var thecol = "<div id='column"+ c +"'><div class='holeheader'>"+ c +"</div></div>";

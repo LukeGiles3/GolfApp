@@ -3,23 +3,36 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Golf Scorecard App</title>
-  <link rel="stylesheet"
-        href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <select id="course-select" onchange="getCourse(this.value)"></select>
+  <label class="label-style" for="course-select">Which Course?</label>
+  <select id="course-select" class="select-css" onchange="getCourse(this.value)"></select>
+  <label class="label-style" for="course-select">Which Tee?</label>
+  <select id="course-select" class="select-css"></select>
+  <label class="label-style" for="course-select">How Many Players?</label>
+  <select id="course-select" class="select-css"></select>
+
+
   <div id="scorecard">
-    <div class="flex-col" id="course-info"></div>
-    <div class="flex" id="holes"></div>
+    <div class="col" id="course-info"></div>
+  <div class="row">
+    <div class="playerlist">
+      <div class="table">HOLES</div>
+      <div class="table">YARDAGE</div>
+      <div class="table">PAR</div>
+      <div class="table">HANDICAP</div>
+      <input class="table"></input>
+    </div>
+    <div class="row" id="holes">
+    </div>
   </div>
+
   <script src="js/main.js"></script>
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous">
     </script>
 </body>
