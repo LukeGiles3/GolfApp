@@ -44,7 +44,7 @@ function getCourse(id) {
       })
       document.getElementById('holes').innerHTML = holesHtml;
 
-      let numplayers = 3
+      let numplayers = 1
 
       for(var pl = 1; pl <= numplayers; pl++){
         $(".playerlist").append("<input class='table' style='width: 100px;'>");
@@ -62,10 +62,10 @@ function getCourse(id) {
       yardIn = holes.filter(val => val.hole >= 10).reduce((acc, val) => { return acc += val.teeBoxes[0].yards}, 0)
       yardTot = yardOut + yardIn
       
-      $("#8").after(`<div id="out"><p class="table-out">OUT</p><p class="table-out">${yardOut}</p><p class="table-out">${parOut}</p><p class="table-out">*</p><input class='table'><input class='table'><input class='table'></div>`)
+      $("#8").after(`<div id="out"><p class="table-out">OUT</p><p class="table-out">${yardOut}</p><p class="table-out">${parOut}</p><p class="table-out">*</p></div>`)
       // $("#out").after(`<div id="int"><p class="table-input">INT</p><input class="table-input"></input><input class="table-input"></input><input class="table-input"></input></div>`)
-      $("#17").after(`<div id="in"><p class="table-out">IN</p><p class="table-out">${yardIn}</p><p class="table-out">${parIn}</p><p class="table-out">*</p><input class='table'><input class='table'><input class='table'></div>`)
-      $("#in").after(`<div id="total"><p class="table-out">TOT</p><p class="table-out">${yardTot}</p><p class="table-out">${parTot}</p><p class="table-out">*</p><input class='table'><input class='table'><input class='table'></div>`)
+      $("#17").after(`<div id="in"><p class="table-out">IN</p><p class="table-out">${yardIn}</p><p class="table-out">${parIn}</p><p class="table-out">*</p></div>`)
+      $("#in").after(`<div id="total"><p class="table-out">TOT</p><p class="table-out">${yardTot}</p><p class="table-out">${parTot}</p><p class="table-out">*</p></div>`)
       });
     }
   );
