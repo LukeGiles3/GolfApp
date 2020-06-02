@@ -1,11 +1,6 @@
 * {
   background-color: #8AAD47;
 }
-/* input {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-} */
 .playername {
   padding: 5px;
 }
@@ -45,14 +40,13 @@
   padding: 10px;
   margin: 0;
   background-color: white;
-  /* width: 10%; */
 }
-.table-hole {
+.table-out {
   border: 1px solid black;
   border-collapse: collapse;
   padding: 10px;
   margin: 0;
-  background-color: white;
+  background-color: yellow;
 }
 .playername {
   padding: 5px;

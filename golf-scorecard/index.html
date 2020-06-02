@@ -11,10 +11,13 @@
 <body>
   <label class="label-style" for="course-select">Which Course?</label>
   <select id="course-select" class="select-css" onchange="getCourse(this.value)"></select>
-  <label class="label-style" for="course-select">Which Tee?</label>
-  <select id="course-select" class="select-css"></select>
   <label class="label-style" for="course-select">How Many Players?</label>
-  <select id="course-select" class="select-css"></select>
+  <select id="player-select" class="select-css">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
 
 
   <div id="scorecard">
@@ -25,7 +28,6 @@
       <div class="table">YARDAGE</div>
       <div class="table">PAR</div>
       <div class="table">HANDICAP</div>
-      <input class="table"></input>
     </div>
     <div class="row" id="holes">
     </div>
