@@ -1,11 +1,11 @@
 * {
-  background-color: #8AAD47;
+  background-color: #6D8C24;
 }
-.playername {
-  padding: 5px;
+input {
+  display: block;
 }
 .scorecard {
-  display: flex;
+  background-color: white;
 }
 .label-style {
   width: 30%;
@@ -29,7 +29,6 @@
 }
 .row {
   display: flex;
-  /* flex-direction: column; */
 }
 .center-text {
   text-align: center;
@@ -40,6 +39,8 @@
   padding: 10px;
   margin: 0;
   background-color: white;
+  width: 40px;
+  text-align: center;
 }
 .table-out {
   border: 1px solid black;
@@ -47,21 +48,7 @@
   padding: 10px;
   margin: 0;
   background-color: yellow;
-}
-.playername {
-  padding: 5px;
-  background-color: tomato;
-  width: 100%;
-}
-.holeinput{
-  width: 40px;
-  flex-direction: row;
-  height: 30px;
-  background-color: beige;
-}
-.holeheader {
   text-align: center;
-  background-color: red;
 }
 .select-css {
 	display: block;
