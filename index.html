@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="css/style.css" rel="stylesheet"/>
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-l7xaoY0cJM4h9xh1RfazbgJVUZvdtyLWPueWNtLAphf/UbBgOVzqbOTogxPwYLHM" crossorigin="anonymous">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf Scorecard App</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<!-- instead of loading the card, load a submission form with the golf courses and handicaps
-and all that. axios.get all that data then build the card -->
-<body onload="buildCard()">
-    <!-- Here is the basic JS, HTML, & CSS we built together to create a dynamic list of golf holes based on the number of players. -->
-    <h1>golf scorecard</h1>
-    <div class="fullcard">
-        <div class="playerlist"></div>
-        <div id="scorecard"></div>
-    </div>
 
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+<body>
+  <label class="label-style" for="course-select">Which Course?</label>
+  <select id="course-select" class="select-css" onchange="getCourse(this.value)"></select>
+  <label class="label-style" for="course-select">Which Tee?</label>
+  <select id="tee-select" class="select-css" onchange="getTee(this.value)">
+    <option value="1">1</option>
+    <option value="3">3</option>
+    <option value="2">2</option>
+  </select>
+  <label class="label-style" for="course-select">How Many Players?</label>
+  <select onchange="players()" id="player-select" class="select-css">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+
+
+  <div class="scorecard" id="scorecard">
+    <div class="col" id="course-info"></div>
+  <div class="row">
+    <div class="playerlist">
+      <div class="table" style="width: 100px; background-color: red;">HOLES</div>
+      <div class="table" style="width: 100px; background-color: aqua;">YARDAGE</div>
+      <div class="table" style="width: 100px; background-color: aqua;">PAR</div>
+      <div class="table" style="width: 100px; background-color: aqua;">HANDICAP</div>
+    </div>
+    <div class="row" id="holes">
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous">
     </script>
-    <script src="js/main.js"></script>
 </body>
+
 </html>
