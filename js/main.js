@@ -44,23 +44,6 @@ function getCourse(id) {
         })
         document.getElementById('holes').innerHTML = holesHtml;
 
-        function players() {
-          document.getElementById("player-select").addEventListener("change", function() {
-            var numplayers = this.options[this.selectedIndex].value;
-            console.log(numplayers);
-            
-          for (var pl = 1; pl <= numplayers; pl++) {
-            $(".playerlist").append("<input class='table' style='width: 100px;'>");
-          };
-          for (var h = 0; h <= 17; h++) {
-            for (var p = 1; p <= numplayers; p++) {
-              $("#" + h).append("<input class='table'>");
-            }
-          }
-        })
-        }
-        players()
-
         let parOut = holes.filter(val => val.hole < 10).reduce((acc, val) => { return acc += val.teeBoxes[0].par }, 0)
         parIn = holes.filter(val => val.hole >= 10).reduce((acc, val) => { return acc += val.teeBoxes[0].par }, 0)
         parTot = parIn + parOut
@@ -76,4 +59,22 @@ function getCourse(id) {
   );
 }
 
+function players() {
+  document.getElementById("player-select").addEventListener("change", function() {
+    var numplayers = this.options[this.selectedIndex].value;
+    console.log(numplayers);
+    
+  for (var pl = 1; pl <= numplayers; pl++) {
+    $(".playerlist").append("<input class='table' style='width: 100px;'>");
+  };
+  for (var h = 0; h <= 17; h++) {
+    for (var p = 1; p <= numplayers; p++) {
+      $("#" + h).append("<input class='table'>");
+    }
+  }
+})
+}
+
+players();
 getCourses();
+
