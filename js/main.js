@@ -67,14 +67,14 @@ function players() {
     var numplayers = this.options[this.selectedIndex].value;
 
     for (var pl = 1; pl <= numplayers; pl++) {
-      $(".playerlist").append(`<input id='player${pl}' class='table' style='width: 100px;'>`);
+      $(".playerlist").append(`<input id='player${pl}' class='table' style='width: 100px;' type="text">`);
       $("#out").append(`<input placeholder="0" id='outScore' class='table'>`)
       $("#total").append(`<input placeholder="0" id='totalScore' class='table'>`)
       $("#in").append(`<input placeholder="0" id='inScore' class='table'>`)
     };
     for (var h = 0; h <= 17; h++) {
       for (var p = 1; p <= numplayers; p++) {
-        $("#" + h).append(`<input id='hole${h}player${p}' class='table'>`);
+        $("#" + h).append(`<input id='hole${h}player${p}' class='table' type="number">`);
       }
     }
   })
