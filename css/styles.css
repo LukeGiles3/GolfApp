@@ -1,11 +1,13 @@
 * {
-  background-color: #6D8C24;
+  background-color: #A2A632;
+  font-family: sans-serif;
 }
 input {
   display: block;
+  font-size: 16px;
 }
 .scorecard {
-  background-color: white;
+  background-color: #A2A632;
 }
 .label-style {
   width: 25%;
@@ -14,7 +16,6 @@ input {
   display: block;
   background-color: white;
   text-align: center;
-  font-family: sans-serif;
   padding: 10px;
 }
 .thumbnail {
@@ -29,6 +30,10 @@ input {
 }
 .row {
   display: flex;
+  margin-top: 10px;
+}
+.playerlist {
+  margin-top: 10px;
 }
 .center-text {
   text-align: center;
@@ -47,13 +52,13 @@ input {
   border-collapse: collapse;
   padding: 10px;
   margin: 0;
-  background-color: yellow;
+  background-color: #D9C359;
   text-align: center;
+  font-weight: bold;
 }
 .select-css {
 	display: block;
 	font-size: 16px;
-	font-family: sans-serif;
 	font-weight: 700;
 	color: #444;
 	line-height: 1.3;

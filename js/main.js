@@ -38,7 +38,7 @@ function getCourse(id) {
           holes.forEach(hole => {
             holesHtml +=
               `<div id="${num}">
-        <p class="table" style="background-color: red;">${increment()}</p>
+        <p class="table" style="background-color: #FFFC4B; font-weight: bold;">${increment()}</p>
         <p id="yards" class="table">${hole.teeBoxes[teeBox].yards}</p>
         <p id="par" class="table">${hole.teeBoxes[teeBox].par}</p>
         <p id="hcp" class="table">${hole.teeBoxes[teeBox].hcp}</p>
@@ -74,7 +74,7 @@ function players() {
     };
     for (var h = 0; h <= 17; h++) {
       for (var p = 1; p <= numplayers; p++) {
-        $("#" + h).append(`<input id='hole${h}player${p}' class='table' type="number">`);
+        $("#" + h).append(`<input id='hole${h}player${p}' class='table'>`);
       }
     }
   })
