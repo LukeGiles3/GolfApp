@@ -33,7 +33,6 @@ function getCourse(id) {
 
         document.getElementById("tee-select").addEventListener("change", function () {
           var teeBox = this.options[this.selectedIndex].value;
-          console.log(teeBox)
           let holesHtml = ''
           holes.forEach(hole => {
             holesHtml +=
